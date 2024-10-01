@@ -19,6 +19,7 @@ app.get("/produtos",async (req,res)=>{
         port: process.env.dbport?parseInt(process.env.dbport): 3306       
     })
     const [result,fields ] = await conexao.query("SELECT * from produtos")
+    await conexao.end()
     res.send(result)
     }catch(e){
     res.status(500).send("Erro do servidor")
