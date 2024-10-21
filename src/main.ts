@@ -28,15 +28,15 @@ app.get("/produtos",async (req,res)=>{
 
 app.get("/usuarios",async (req,res)=>{
     try{
-    const conexao = await mysql.createConnection({
+    const conexao2 = await mysql.createConnection({
         host: process.env.dbhost?process.env.dbhost: "localhost",
         user: process.env.dbuser?process.env.dbuser: "root",
         password: process.env.dbpassword?process.env.dbpassword: "",
         database: process.env.dbname?process.env.dbname: "banco1022b",
         port: process.env.dbport?parseInt(process.env.dbport): 3306       
     })
-    const [result,fields ] = await conexao.query("SELECT * from usuarios")
-    await conexao.end()
+    const [result,fields ] = await conexao2.query("SELECT * from usuarios")
+    await conexao2.end()
     res.send(result)
     }catch(e){
     res.status(500).send("Erro do servidor")
