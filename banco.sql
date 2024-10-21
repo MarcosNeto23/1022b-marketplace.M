@@ -1,4 +1,4 @@
-USE banco1022b;
+USE defaultdb;
 CREATE TABLE IF NOT EXISTS produtos(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS produtos(
 );
 INSERT INTO produtos VALUES (1,'Iphone','Celular RUIM',5000.50,'SEM IMAGEM');
 
-USE banco1022b;
+USE defaultdb;
 CREATE TABLE IF NOT EXISTS usuarios(
 id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
@@ -16,7 +16,7 @@ id BIGINT PRIMARY KEY AUTO_INCREMENT,
     created_at timestamp(4),
     updated_at timestamp(4)
 );
-INSERT INTO `banco1022b`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('1', 'Marcos', 'marcos.neto@estudante.ifms.edu.br', '2024-10-21 07:40', '2024-10-21 07:41');
+INSERT INTO `defaultdb`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('1', 'Marcos', 'marcos.neto@estudante.ifms.edu.br', '2024-10-21 07:40', '2024-10-21 07:41');
 
 /*
 USE defaultdb;
