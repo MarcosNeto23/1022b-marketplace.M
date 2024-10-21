@@ -16,7 +16,7 @@ id BIGINT PRIMARY KEY AUTO_INCREMENT,
     created_at timestamp(4),
     updated_at timestamp(4)
 );
-/*INSERT INTO produtos VALUES (1,'Iphone','Celular RUIM',5000.50,'SEM IMAGEM');/*
+INSERT INTO `banco1022b`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('1', 'Marcos', 'marcos.neto@estudante.ifms.edu.br', '2024-10-21 07:40', '2024-10-21 07:41');
 
 /*
 USE defaultdb;
