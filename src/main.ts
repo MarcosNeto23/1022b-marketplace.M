@@ -16,7 +16,7 @@ app.get("/produtos",async (req,res)=>{
         user: process.env.dbuser?process.env.dbuser: "root",
         password: process.env.dbpassword?process.env.dbpassword: "",
         database: process.env.dbname?process.env.dbname: "defaultdb",
-        port: process.env.dbport?parseInt(process.env.dbport): 3306       
+        port: process.env.dbport?parseInt(process.env.dbport): 20334       
     })
     const [result,fields ] = await conexao.query("SELECT * from produtos")
     await conexao.end()
@@ -33,7 +33,7 @@ app.get("/usuarios",async (req,res)=>{
         user: process.env.dbuser?process.env.dbuser: "root",
         password: process.env.dbpassword?process.env.dbpassword: "",
         database: process.env.dbname?process.env.dbname: "defaultdb",
-        port: process.env.dbport?parseInt(process.env.dbport): 3306       
+        port: process.env.dbport?parseInt(process.env.dbport): 20334       
     })
     const [result,fields ] = await conexao2.query("SELECT * from usuarios")
     await conexao2.end()
