@@ -1,4 +1,4 @@
-USE banco1022b;
+USE defaultdb;
 CREATE TABLE IF NOT EXISTS produtos(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
