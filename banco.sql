@@ -17,7 +17,8 @@ id BIGINT PRIMARY KEY AUTO_INCREMENT,
     updated_at timestamp(4)
 );
 INSERT INTO `banco1022b`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('1', 'Marcos', 'marcos.neto@estudante.ifms.edu.br', '2024-10-21 07:40', '2024-10-21 07:41');
-
+INSERT INTO `banco1022b`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('2', 'Mateus', 'mateus@gmail.com', '2024-10-21 07:40', '2024-11-22 07:41');
+INSERT INTO `banco1022b`.`usuarios` (`id`, `nome`, `email`, `created_at`, `updated_at`) VALUES ('3', 'Felipe Brito', 'felipe@gmail.com', '2024-10-22 07:45', '2024-10-24 07:31');
 
 /*
 USE defaultdb;
