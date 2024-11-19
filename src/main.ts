@@ -50,7 +50,7 @@ app.post("/produtos",async(req,res)=>{
             await conexao.query("INSERT INTO produtos VALUES (?,?,?,?,?)",
                 [id,nome,descricao,preco,imagem])
         await conexao.end()
-        res.send(result)
+        res.status(200).send(result)
     }catch(e){
         console.log(e)
         res.status(500).send("Erro do servidor")
