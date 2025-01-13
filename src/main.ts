@@ -50,6 +50,14 @@ app.post("/produtos",async(req,res)=>{
     }  
 })
 
+app.delete("/produtos/:id",(req,res)=>{
+    console.log("Tentando excluir o produto de id:",req.params.id)
+    res.send("Tentando excluir o produto de id:"+req.params.id)
+})
+app.put("/produtos/:id",(req,res)=>{
+    console.log("Tentando alterar o produto de id:",req.params.id)
+    res.send("Tentando alterar o produto de id:"+req.params.id)
+})
 
 
 
