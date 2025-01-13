@@ -19,7 +19,7 @@ import BancoMysql from './db/bancoMysql'
 app.get("/produtos",async(req,res)=>{
     try{
         const banco = new BancoMysql();
-        const result = await banco.query()
+        const result = await banco.query("SELECT * FROM produtos")
         console.log(result)
         await banco.end()
         res.send(result)
@@ -48,12 +48,4 @@ app.post("/produtos",async(req,res)=>{
         console.log(e)
         res.status(500).send("Erro do servidor")
     }  
-})
-
-
-
-
-//INICIAR O SERVIDOR
-app.listen(8000,()=>{
-    console.log("SERVIDOR INICIADO NA PORTA 8000")
 })
