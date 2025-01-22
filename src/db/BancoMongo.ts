@@ -28,7 +28,7 @@ class BancoMongo{
         const result = await conn.collection("produtos").find().toArray()
         return result
     }
-    async inserir(produto:{id:string,nome:string,descricao:string,preco:string,imagem:string}){
+    async inserir(produto:{id:number,nome:string,descricao:string,preco:string,imagem:string}){
         const conn = await this.getConnection()
         const result = await conn.collection("produtos").insertOne(produto)
         return result
@@ -43,7 +43,11 @@ class BancoMongo{
         const result = await conn.collection("produtos").updateOne({id:parseInt(id)},{$set:produto})
         return result
     }
-
+    async listarPorId(id:string){
+        const conn = await this.getConnection()
+        const result = await conn.collection("produtos").findOne({id:parseInt(id)})
+        return result
+    }
 }
 
 export default BancoMongo;
